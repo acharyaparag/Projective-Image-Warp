@@ -1,0 +1,46 @@
+Name:Parag Acharya
+Email:pachary@clemson.edu
+
+warper.cpp warps the input image and writes into an output image
+It contains the following procedures:
+Reading an image : loadImage
+Writing an image: writeImage
+Displaying image: displayImage
+warping : warp the input image
+forwardMap : Calculates the bounding box size
+
+For each operation separate routine is used:
+Rotate - rotate an image
+Scale - Scales the image based on the input x and y scaling factor
+Translate - Translates the image based on the input x and y translation factor
+Shear - Shear the image based on the input x and y shearing factor
+Perspective - Creates a Perpective based on the input x(a31) and y(a32) values 
+Flip - Flips the image. If x = 1 , flips the x coordinates. If y = 1, flips the y coordinates.
+ 
+test.png is the input image
+out.png is the sample ouput image created by scaling 0.5 in both the x and y directions
+
+To run code compile using makefile(type make) and then type ./warper input_image output_image(optional)
+warped image is written to output_image if it is specified else nothing is written
+
+
+
+interactive is the executable that runs warper in interactive mode
+It contains the following procedures:
+Reading an image : loadImage
+Writing an image: writeImage
+Displaying image: displayImage
+warping : warp the input image
+forwardMap : Calculates the bounding box size
+calcM : Computes the projective warp matrix
+
+To run code compile using makefile(type make) and then type ./interactive input_image
+
+When specifying the corners of the output warped quadrilateral make sure to go in anti-clockwise direction starting with the bottom left corner
+First click should be the bottom left corner of the image
+Second click should be the bottom right	corner of the image
+Third click should be the Top right corner of the image
+Fourth click should be the Top left corner of the image
+
+
+
